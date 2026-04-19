@@ -159,7 +159,6 @@ body {
     border-radius: 40px;
 }
 
-/* 7. ФУТЕР */
 #footer {
     width: 100%;
     background-color: #960201;
@@ -170,8 +169,15 @@ body {
     margin-top: 30px;
 }
 
-/* 8. АДАПТИВНОСТЬ (ИСПРАВЛЕНИЕ ОШИБОК С ВИДЕО) */
+/* ОБНОВЛЕННАЯ АДАПТИВНОСТЬ: ОТКЛЮЧЕНИЕ АНИМАЦИЙ */
 @media screen and (max-width: 768px) {
+    /* 1. Отключаем анимацию появления для всего контейнера */
+    #container {
+        opacity: 1 !important;
+        animation: none !important;
+        transform: none !important;
+    }
+
     #header { 
         height: auto; 
         flex-direction: column; 
@@ -193,10 +199,17 @@ body {
         gap: 25px;
     }
 
+    /* 2. Отключаем эффекты увеличения для карточек */
     .card { 
         width: 90%; 
         height: auto; 
         padding-bottom: 30px;
+        transform: none !important; /* Убираем scale при наведении */
+        transition: none !important; /* Убираем плавность, чтобы не лагало */
+    }
+    
+    .card:hover {
+        transform: none !important;
     }
 
     #nav { 
@@ -205,17 +218,23 @@ body {
         gap: 15px;
     }
 
+    /* 3. Полный сброс для ссылок-картинок (Данте) */
     .dmc { 
-        height: 200px; /* Увеличили высоту карточки */
+        height: 200px; 
         width: 100%; 
         border-radius: 25px; 
         flex: none; 
-        opacity: 1 !important; /* Убираем прозрачность на мобильных */
+        margin-bottom: 10px;
+        opacity: 1 !important;
+        animation: none !important; /* Убираем анимацию появления */
+        transition: none !important; /* Убираем задержку при нажатии */
         transform: none !important;
-        background-position: center top; /* Центрируем по верху, чтобы видеть лица */
+        background-position: center 20%;
     }
 
     .dmc:hover {
-        transform: scale(1.02);
+        flex: none !important; /* Чтобы карточка не пыталась расшириться */
+        transform: none !important;
+        border-radius: 25px !important;
     }
 }
