@@ -1,0 +1,227 @@
+@font-face {
+            font-family: 'DMC5font';
+            src: url('fonts/DMC5Font_Cyr_by_Rafa_Deymos_-1.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+            unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+            font-family: "DMC5font", sans-serif;
+            margin: 0;
+            color: #ccc;
+        }
+
+        #container {
+            width: 100%;
+            background-color: transparent; 
+            display: block;
+        }
+
+        @keyframes show {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        #header {
+            width: 100%;
+            height: 60px;
+            background: #960201;
+            padding: 0 20px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            opacity: 0;
+            animation: show 1s forwards 0.3s;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: black; /* Название сайта теперь черное */
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .header-links {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: white;
+        }
+
+        .header-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        #header img {
+            height: 30px;
+            width: auto;
+        }
+
+        #content {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            padding: 50px 20px;
+            opacity: 0;
+            animation: show 1s forwards 0.3s;
+        }
+
+        .game_name {
+            height: 400px;
+            width: 60%;
+            transition: 0.7s;
+        }
+
+        .game_name img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 30px;
+        }
+
+        #game_card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .game_name_text {
+            width: 100%;
+            color: #960201;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            padding: 20px;
+        }
+
+        .game_rate {
+            width: 60%;
+            min-height: 150px;
+            background: #960201;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 30px;
+            padding: 25px;
+            text-align: center;
+            transition: 0.6s ease;
+            opacity: 0; /* Невидимый по умолчанию */
+            transform: translateY(20px);
+        }
+
+        #game_card:hover .game_rate {
+            opacity: 1; /* Появляется при наведении */
+            transform: translateY(0);
+        }
+
+        .game_rate:hover, .game_name:hover {
+            transform: scale(1.05);
+        }
+
+        .story_prolog, .story_nelo, .story_pred, .story_final, .story_epilog {
+            width: 80%;
+            line-height: 1.6;
+        }
+
+        h1 {
+            color: #960201;
+            border-bottom: 2px solid #960201;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        /* ОФОРМЛЕНИЕ ФОРМЫ (КОМПАКТНАЯ И ПО ЦЕНТРУ) */
+        form {
+            width: 90%;
+            max-width: 500px; /* Ограничили ширину, чтобы не растягивалась */
+            background: #1a1a1a;
+            padding: 30px;
+            border-radius: 30px;
+            border: 1px solid #960201;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin: 40px auto; /* Центрирование */
+        }
+
+        form h2 {
+            color: #960201;
+            text-align: center;
+            font-size: 20px;
+            margin: 0;
+        }
+
+        form input[type="email"], 
+        form textarea {
+            width: 100%;
+            background: #000;
+            border: 1px solid #444;
+            border-radius: 10px;
+            padding: 12px;
+            color: white;
+            font-family: inherit;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        form input[type="email"]:focus, 
+        form textarea:focus {
+            border-color: #960201;
+        }
+
+        form input[type="submit"] {
+            background: #960201;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+
+        form input[type="submit"]:hover {
+            background: #6e0101;
+            transform: translateY(-2px);
+        }
+
+        #footer {
+            width: 100%;
+            background-color: #960201;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            margin-top: 50px;
+            opacity: 0;
+            animation: show 1s forwards 0.3s;
+        }
+
+        @media screen and (max-width: 768px) {
+            .game_name, .game_rate, .story_prolog, .story_nelo, .story_pred, .story_final, .story_epilog {
+                width: 95%;
+            }
+            .game_rate {
+                opacity: 1; /* На мобилках лучше всегда показывать */
+                transform: none;
+            }
+        }

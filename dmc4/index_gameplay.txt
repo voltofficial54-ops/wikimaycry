@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Wiki may cry</title>
+    <link rel="stylesheet" href="style_story.css">
+</head>
+<body>
+    <div id="container">
+        
+        <div id="header">
+            <div class="logo-area">
+                <img src="лого версия первая 1.png" alt="logo"> Wiki may cry
+            </div>
+            <div class="header-links">
+                <img src="patreon.png" alt="patreon"><a href="https://patreon.com/Vladimir_chay?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink"> Наш патреон</a> / 
+                <img src="discord.png" alt="discord"> Наш дискорд
+            </div>
+        </div>
+            <div id="content">
+                <div class="game_name">
+                    <a href="https://store.steampowered.com/app/329050/Devil_May_Cry_4_Special_Edition/" target="_blank">
+                    <img src="https://images.gog-statics.com/10a9d03006a16356f31068d8de35e745a021dd437a7b80b08c898643313b4b64.jpg" alt="Devil May Cry">
+                    </a>
+                    </div>
+                    <div id="game_card">
+                    <div class="game_name_text">Devil may cry 4</div>
+                <div class="game_rate">
+                    Devil May Cry 4 — слэшер от Capcom, выпущенный 31 января 2008 года (PS3, Xbox 360), позже на ПК. <br>Режиссером выступил Хидэаки Ицуно (Hideaki Itsuno), продюсером — Хироюки Кобаяси (Hiroyuki Kobayashi).
+                </div>
+                </div>
+                <div class="story_prolog">
+                <h1>Мастерство Неро: Сила правой руки</h1>
+                <p>Неро полагается на свой уникальный меч и демоническую руку. Его геймплей строится на ритме.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Devil Bringer (Захват): Это ваш главный инструмент. Используйте его, чтобы притягивать мелких врагов к себе или самому притягиваться к крупным боссам. Захват во время Devil Trigger наносит двойной урон и меняет анимацию добивания.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Механика Exceed (Зажигание): У меча «Алая Королева» есть рукоятка мотоциклетного типа. Нажимайте кнопку зарядки (L2/LT) ровно в момент удара. Если поймаете тайминг, меч вспыхнет пламенем, а следующий удар станет в разы мощнее и быстрее.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Заряженный выстрел (Charge Shot): Всегда удерживайте кнопку стрельбы во время боя. Третий уровень заряда револьвера «Синяя Роза» создает взрыв, который подбрасывает врагов и наносит огромный урон.</p>
+                </div>
+                <div class="story_nelo">
+                    <h1>Мастерство Данте: Динамический хаос</h1>
+                    <p>В этой части Данте может менять стили и оружие прямо на лету, что делает его комбинации бесконечными.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Style Switching (Смена стилей): Вы больше не ограничены одним стилем на миссию. Используйте Trickster для сближения, переключайтесь на Swordmaster для серии ударов и мгновенно переходите в Royal Guard, если враг атакует.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Инерция и скольжение: Многие атаки Данте сохраняют инерцию движения. Если использовать приемы в воздухе после рывка, вы сможете пролетать огромные расстояния, оставаясь недосягаемым.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ящик Пандоры (Pandora): Это трансформирующееся оружие имеет 666 форм. Изучите комбинации клавиш, чтобы превращать чемодан в ракетную установку, лазерную пушку или даже летающую турель.</p>
+                </div>
+                <div class="story_pred">
+                    <h1>Взаимодействие с врагами</h1>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Битва со щитами: В игре много врагов со щитами (Гладиусы, Мефисто). Неро может пробивать их с помощью Exceed-ударов или захвата, а Данте лучше использовать стиль Swordmaster с мечом Гильгамеш.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Кровавые Горгульи (Faults): Эти враги появляются из-под земли и пытаются проглотить героя. Всегда оставайтесь в движении или используйте прыжки, чтобы не попасть в их ловушку.</p>
+                </div>
+                <div class="story_final">
+                    <h1>Советы по боссам</h1>
+                    <p>Бериал (Огненный Кентавр): Используйте прыжки и удары сверху. Когда пламя на его теле гаснет, он становится уязвим для захвата Неро — это наносит критический урон.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Кредо: Это дуэльный босс. Лучшая тактика — вовремя уклоняться и ловить момент, когда он открывается после своей серии атак. Неро может поймать его копье в воздухе и метнуть обратно.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Данте (при игре за Неро): Данте будет предугадывать ваши движения. Не спамьте захватом — он его отразит. Используйте провокации и ловите его на ошибках.</p>
+                </div>
+                </div>
+                <div id="clear"></div>
+        <div id="footer">
+            <p>© 2026. Сайт создан Vladimir_chay. Все данные защищены.</p>
+        </div>
+    </div>
+                

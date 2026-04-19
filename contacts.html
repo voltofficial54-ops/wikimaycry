@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style_contacts.css">
+    <title>Контакты — Wiki may cry</title>
+</head>
+<body>
+    <div id="header">
+        <div class="logo-area">
+            <a href="index.html">Wiki may cry</a>
+        </div>
+        <div class="header-links">
+            <a href="index.html">Главная</a>
+            <a href="https://patreon.com/Vladimir_chay" target="_blank">Патреон</a>
+            <a href="https://discord.gg/4jDkVwDK54" target="_blank">Дискорд</a>
+        </div>
+    </div>
+
+    <div id="content">
+        <div class="contact-info">
+            <h1>Контакты</h1>
+            <p>Есть вопросы по прохождению или предложения по сайту?</p>
+            <p>Email: support@wikimaycry.com</p>
+        </div>
+
+        <form action="dmc_php.php" method="POST">
+            <h2>Напишите нам</h2>
+            <input type="email" name="email" placeholder="Ваш Email" required>
+            <textarea name="message" rows="5" placeholder="Ваше сообщение..."></textarea>
+            <input type="submit" value="Отправить">
+        </form>
+    </div>
+
+    <div id="footer">
+        © 2026. Сайт создан Vladimir_chay. Все данные защищены. Сайт создан в учебных целях.
+    </div>
+</body>
+</html>
