@@ -1,172 +1,221 @@
+/* 1. ПОДКЛЮЧЕНИЕ ШРИФТА */
 @font-face {
-            font-family: 'DMC5Font';
-            src: url('fonts/DMC5Font_Cyr_by_Rafa_Deymos_-1.otf') format('opentype');
-            font-weight: normal;
-            font-style: normal;
-            font-display: swap;
-            unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-        }
+    font-family: 'DMC5Font';
+    /* Убедись, что на хостинге папка fonts и файл называются именно так маленькими буквами */
+    src: url('fonts/dmc5font_cyr_by_rafa_deymos_-1.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
-        * {
-            box-sizing: border-box;
-        }
+/* 2. ОБЩИЕ СТИЛИ */
+* {
+    box-sizing: border-box;
+}
 
-        body {
-            background-color: black;
-            font-family: "DMC5Font", sans-serif;
-            margin: 0;
-            color: white;
-        }
+body {
+    background-color: black;
+    font-family: "DMC5Font", sans-serif;
+    margin: 0;
+    color: white;
+    overflow-x: hidden; /* Убирает горизонтальную прокрутку на смартфонах */
+}
 
-        @keyframes show {
-            0% { opacity: 0; }
-            100% { opacity: 1; transform: translateY(0); } 
-        }
+@keyframes show {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); } 
+}
 
-        #container {
-            width: 100%;
-            background-color: transparent; 
-            display: block;
-            opacity: 0;
-            animation: show 1s forwards 0.3s;
-        }
+#container {
+    width: 100%;
+    background-color: transparent; 
+    display: block;
+    opacity: 0;
+    animation: show 1s forwards 0.3s;
+}
 
-        /* ОБНОВЛЕННЫЙ ХЕДЕР */
-        #header {
-            width: 100%;
-            height: 60px;
-            background: #960201;
-            padding: 0 20px;
-            box-sizing: border-box;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+/* 3. ХЕДЕР (ШАПКА) */
+#header {
+    width: 100%;
+    height: 60px;
+    background: #960201;
+    padding: 0 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        .logo-area {
-            font-size: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: black; /* Название сайта черное */
-            font-weight: bold;
-        }
+.logo-area {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: black; /* Название сайта черное, как ты просил */
+    font-weight: bold;
+}
 
-        #header img {
-            height: 30px;
-            width: auto;
-        }
+#header img {
+    height: 30px;
+    width: auto;
+}
 
-        .header-links {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            color: white;
-        }
+.header-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+}
 
-        .header-links a {
-            color: white;
-            text-decoration: none;
-            transition: 0.3s;
-        }
+.header-links a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
 
-        .header-links a:hover {
-            opacity: 0.7;
-        }
+.header-links a:hover {
+    opacity: 0.7;
+    text-decoration: underline;
+}
 
-        /* ПРИВЕТСТВИЕ */
-        #hello {
-            width: 100%; 
-            height: 350px;
-            background-image: url('block.png'); 
-            background-size: cover; 
-            background-position: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 0 0 40px 40px;
-        }
+/* 4. БЛОК ПРИВЕТСТВИЯ */
+#hello {
+    width: 100%; 
+    height: 350px;
+    background-image: url('block.png'); 
+    background-size: cover; 
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 40px 40px;
+}
 
-        .text {
-            color: white;
-            text-align: center;
-            font-size: 24px;
-            font-weight: bold;
-            line-height: 1.5;
-            text-shadow: 2px 2px 10px black;
-            padding: 20px;
-        }
+.text {
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.5;
+    text-shadow: 2px 2px 10px black;
+    padding: 20px;
+}
 
-        /* КАРТОЧКИ КОНТЕНТА */
-        #content {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            padding: 50px 20px;
-        }
+/* 5. КАРТОЧКИ СЮЖЕТ/ГЕЙМПЛЕЙ */
+#content {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 50px 20px;
+}
 
-        .card {
-            background-color: #4b4e54;
-            width: 33.33%;
-            height: 380px;
-            border-radius: 40px;
-            color: #000;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-            transition: transform 0.3s ease-in-out;
-            text-align: center;
-            font-size: 20px;
-            padding: 20px;
-        }
+.card {
+    background-color: #4b4e54;
+    width: 33.33%;
+    height: 380px;
+    border-radius: 40px;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+}
 
-        .card:hover {
-            transform: scale(1.05);
-        }
+.card:hover {
+    transform: scale(1.05);
+}
 
-        /* НАВИГАЦИЯ ПО ИГРАМ */
-        #nav {
-            display: flex;
-            width: 100%;
-            padding: 20px;
-            gap: 10px;
-        }
+/* 6. НАВИГАЦИЯ (КАРТИНКИ С ДАНТЕ) */
+#nav {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    gap: 10px;
+}
 
-        .dmc {
-            display: block;
-            text-decoration: none;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 70vh;
-            border-radius: 300px;
-            flex: 1;
-            transition: flex 0.7s ease-in-out, transform 0.3s ease-in-out;
-            opacity: 0;
-            animation: show 1s forwards 0.5s;
-        }
+.dmc {
+    display: block;
+    text-decoration: none;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 70vh;
+    border-radius: 300px;
+    flex: 1;
+    transition: flex 0.7s ease-in-out, transform 0.3s ease-in-out, border-radius 0.5s;
+    opacity: 0;
+    animation: show 1s forwards 0.5s;
+}
 
-        .dmc:hover {
-            flex: 2;
-            transform: scale(1.02);
-            border-radius: 40px;
-        }
+.dmc:hover {
+    flex: 2;
+    transform: scale(1.02);
+    border-radius: 40px;
+}
 
-        #footer {
-            width: 100%;
-            background-color: #960201;
-            color: white;
-            text-align: center;
-            font-size: 16px;
-            padding: 15px;
-            margin-top: 30px;
-        }
+/* 7. ФУТЕР */
+#footer {
+    width: 100%;
+    background-color: #960201;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    padding: 15px;
+    margin-top: 30px;
+}
 
-        /* Адаптивность */
-        @media screen and (max-width: 768px) {
-            #header { height: auto; flex-direction: column; padding: 10px; gap: 10px; }
-            #content { flex-direction: column; align-items: center; }
-            .card { width: 90%; height: auto; }
-            #nav { flex-direction: column; height: auto; }
-            .dmc { height: 150px; border-radius: 20px; flex: none; }
-        }
+/* 8. АДАПТИВНОСТЬ (ИСПРАВЛЕНИЕ ОШИБОК С ВИДЕО) */
+@media screen and (max-width: 768px) {
+    #header { 
+        height: auto; 
+        flex-direction: column; 
+        padding: 15px; 
+        gap: 15px; 
+    }
+
+    #hello { 
+        height: 250px; 
+    }
+
+    .text { 
+        font-size: 18px; 
+    }
+
+    #content { 
+        flex-direction: column; 
+        align-items: center; 
+        gap: 25px;
+    }
+
+    .card { 
+        width: 90%; 
+        height: auto; 
+        padding-bottom: 30px;
+    }
+
+    #nav { 
+        flex-direction: column; 
+        height: auto; 
+        gap: 15px;
+    }
+
+    .dmc { 
+        height: 200px; /* Увеличили высоту карточки */
+        width: 100%; 
+        border-radius: 25px; 
+        flex: none; 
+        opacity: 1 !important; /* Убираем прозрачность на мобильных */
+        transform: none !important;
+        background-position: center top; /* Центрируем по верху, чтобы видеть лица */
+    }
+
+    .dmc:hover {
+        transform: scale(1.02);
+    }
+}
